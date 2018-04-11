@@ -1,0 +1,11 @@
+/*
+Theme Name: Bfriend Code
+Theme URI: http://www.bfriend.com.br
+Description: Framework Bfriend Codes
+Version: 2.0
+Author: Bruno Souza | Valdeir Júnior
+*/
+
+@import "assets/css/_bootstrap.css";
+@import "assets/css/_bootstrap.offcanvas.css";
+@import "assets/css/_theme.css";
