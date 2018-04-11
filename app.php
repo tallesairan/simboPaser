@@ -382,13 +382,19 @@ function insertImages($images,$post_id){
     foreach ($images as $image) {
         $ids[]=  insertImage($image,$post_id);
     }
-    return $ids;
-    #return implode(',',$ids);
+    return update_field( $ids, 'field_5963d628c390f', $post_id );
 }
-function insertTerms($meta,$post_id){
+function insertTerms($terms,$post_id){
     $tms = [];
-    foreach ($meta as $metak => $mt){
-        $tms[] = createOrSetCategory($mt,$post_id,$metak);
+    foreach ($terms as $metak => $mt){
+        if(is_array($mt)){
+            foreach ($mt as $mtk => $mkt){
+                $tms[] = createOrSetCategory($mkt,$post_id,$metak);
+            }
+        }
+        else{
+            $tms[] = createOrSetCategory($mt,$post_id,$metak);
+        }
     }
     return $tms;
 }
@@ -476,35 +482,11 @@ function insertImovel($item){
             syslog(LOG_DEBUG,"Categoria ".$item['post_category']." setada");
         }
         $metas = insertMetas($item['metas'],$post_id);
-        $firstImage = @array_pop(array_reverse($item['images']));
+        $terms = insertTerms($item['term'],$post_id);
+        $images = insertImages($item['images'],$post_id);
 
+    $firstImage = @array_pop(array_reverse($item['images']));
         setDefaultImage($firstImage,$post_id);
-
-        wp_set_object_terms( $post_id, 'simple', 'product_type' );
-        update_post_meta( $post_id, '_visibility', 'visible' );
-        update_post_meta( $post_id, '_wc_rating_count', '5' );
-        update_post_meta( $post_id, '_stock_status', 'instock');
-        update_post_meta( $post_id, 'total_sales', '0' );
-        update_post_meta( $post_id, '_downloadable', 'no' );
-        update_post_meta( $post_id, '_virtual', 'no' );
-        update_post_meta( $post_id, '_regular_price', '' );
-        update_post_meta( $post_id, '_sale_price', '' );
-        update_post_meta( $post_id, '_purchase_note', 'Pagamento via Deposito / Transferencia 10% de desconto' );
-        update_post_meta( $post_id, '_featured', 'no' );
-        update_post_meta( $post_id, '_weight',  1.9 );
-        update_post_meta( $post_id, '_length', '' );
-        update_post_meta( $post_id, '_width','' );
-        update_post_meta( $post_id, '_height', '' );
-        update_post_meta( $post_id, '_sku', uniqid() );
-        update_post_meta( $post_id, '_product_attributes', array() );
-        update_post_meta( $post_id, '_product_image_gallery', insertImages($item['thumbs'],$post_id));
-        update_post_meta( $post_id, '_sale_price_dates_from', '' );
-        update_post_meta( $post_id, '_sale_price_dates_to', '' );
-        update_post_meta( $post_id, '_price', $item['post_price'] );
-        update_post_meta( $post_id, '_sold_individually', '' );
-        update_post_meta( $post_id, '_manage_stock', 'no' );
-        update_post_meta( $post_id, '_backorders', 'no' );
-        update_post_meta( $post_id, '_stock', '' );
         unset($item);
 }
 ?>

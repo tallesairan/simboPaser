@@ -24,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1595">
-              <caret line="477" column="14" selection-start-line="477" selection-start-column="8" selection-end-line="477" selection-end-column="14" />
+            <state relative-caret-position="454">
+              <caret line="418" column="6" selection-start-line="418" selection-start-column="6" selection-end-line="418" selection-end-column="6" />
               <folding>
                 <element signature="n#simpleCachedCurl#0;n#!!top" />
                 <element signature="n#expstr#0;n#!!top" />
@@ -38,8 +38,6 @@
                 <element signature="n#raw_json_encode#0;n#!!top" />
                 <element signature="n#wcproduct_set_attributes#0;n#!!top" />
                 <element signature="n#insertImage#0;n#!!top" />
-                <element signature="n#setDefaultImage#0;n#!!top" />
-                <element signature="n#insertImages#0;n#!!top" />
                 <element signature="n#insertTerms#0;n#!!top" />
                 <element signature="n#createOrSetCategory#0;n#!!top" />
               </folding>
@@ -47,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="populator.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="populator.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/populator.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
+            <state relative-caret-position="524">
+              <caret line="64" column="15" lean-forward="true" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
               </folding>
@@ -61,6 +59,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>update_field</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -68,8 +71,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Paser.php" />
-        <option value="$PROJECT_DIR$/app.php" />
         <option value="$PROJECT_DIR$/populator.php" />
+        <option value="$PROJECT_DIR$/app.php" />
       </list>
     </option>
   </component>
@@ -132,12 +135,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523457869161</updated>
-      <workItem from="1523457872178" duration="15085000" />
+      <workItem from="1523457872178" duration="15589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15085000" />
+    <option name="totallyTimeSpent" value="15589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="982" extended-state="6" />
@@ -235,10 +238,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/populator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="64" column="15" lean-forward="true" selection-start-line="64" selection-start-column="15" selection-end-line="64" selection-end-column="15" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1595">
-          <caret line="477" column="14" selection-start-line="477" selection-start-column="8" selection-end-line="477" selection-end-column="14" />
+        <state relative-caret-position="454">
+          <caret line="418" column="6" selection-start-line="418" selection-start-column="6" selection-end-line="418" selection-end-column="6" />
           <folding>
             <element signature="n#simpleCachedCurl#0;n#!!top" />
             <element signature="n#expstr#0;n#!!top" />
@@ -248,20 +261,8 @@
             <element signature="n#raw_json_encode#0;n#!!top" />
             <element signature="n#wcproduct_set_attributes#0;n#!!top" />
             <element signature="n#insertImage#0;n#!!top" />
-            <element signature="n#setDefaultImage#0;n#!!top" />
-            <element signature="n#insertImages#0;n#!!top" />
             <element signature="n#insertTerms#0;n#!!top" />
             <element signature="n#createOrSetCategory#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/populator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="70" column="4" selection-start-line="70" selection-start-column="4" selection-end-line="70" selection-end-column="4" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
