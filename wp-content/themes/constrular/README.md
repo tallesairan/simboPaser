@@ -1,2 +1,0 @@
-Bfriend Codes Framework
-========================
