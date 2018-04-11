@@ -32,7 +32,7 @@ foreach ($url->all() as $key => $product) {
         'lng'=>$product['Location']['Longitude']
     );
     foreach($product['Media']['MediaItem'] as $mediaK => $media){
-        $metas['images'][] = $media;
+        $fkj['images'][] = $media;
     }
     if($product['AvailableToRent']){
         $metas['field_5963d5bcc15d0'] = $product['RentPrice'];
@@ -67,9 +67,8 @@ if($postExist){
 }
 else{
     // cria novo
-    $fi = @array_pop(array_reverse($product['metas']['images']));
-    echo $fi;
-    #print_r($product);
+
+    print_r($product);
 }
 }
 die();

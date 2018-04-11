@@ -466,7 +466,6 @@ function insertImovel($item){
             'post_author' => 1,
             'post_title' => $item['post_title'],
             'post_content' => $item['post_content'],
-
             'post_status' => 'publish',
             'post_type' => "imovel",
         ) );
@@ -474,12 +473,12 @@ function insertImovel($item){
         add_filter('content_filtered_save_pre', 'wp_filter_post_kses');
 
         if(createOrSetCategory($item['post_category'],$post_id,'ctimovel')){
-            syslog(LOG_DEBUG,"Categoria ".$item['post_brand']." setada");
-
+            syslog(LOG_DEBUG,"Categoria ".$item['post_category']." setada");
         }
-        $firstImage = @array_pop(array_reverse($product['metas']['images']));
+        $metas = insertMetas($item['metas'],$post_id);
+        $firstImage = @array_pop(array_reverse($item['images']));
 
-    setDefaultImage(str_replace('{w}x{h}','700x700',$item['post_image']),$post_id);
+        setDefaultImage($firstImage,$post_id);
 
         wp_set_object_terms( $post_id, 'simple', 'product_type' );
         update_post_meta( $post_id, '_visibility', 'visible' );
